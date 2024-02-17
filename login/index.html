@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Instacash - Log in</title>
+  </head>
+  <body>
+    <div class="top">
+      <img
+        src="./assets/img/ic-logo.jpeg"
+        width="100%"
+        style="max-width: 100px"
+      />
+    </div>
+    <div class="maispadding">
+      <div class="container">
+        <img src="./assets/img/banner.jpeg" />
+        <section class="header">
+          <p style="font-size: 18px; color: #4a4a4a; font-weight: bolder">
+            Welcome to Instacash!
+          </p>
+        </section>
+
+        <form id="form" class="form">
+          <div class="form-content">
+            <!-- <label for="username">Your name</label> -->
+            <input type="text" id="username" placeholder="Enter your name..." />
+            <a>Sorry, an error occurred...</a>
+          </div>
+
+          <div class="form-content">
+            <!-- <label for="email">Email address</label> -->
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email used for registration..."
+            />
+            <a>Sorry, an error occurred...</a>
+          </div>
+
+          <button type="submit">Log in</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
