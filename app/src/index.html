@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed de Rede Social</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .perfil {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .foto-perfil {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .foto-perfil img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .perfil-info {
+        display: flex;
+        align-items: center;
+      }
+
+      .nome-perfil {
+        margin-left: 10px;
+        font-size: 24px;
+      }
+
+      .feed {
+        margin-top: 20px;
+      }
+
+      .postagem {
+        margin-bottom: 20px;
+      }
+
+      .postagem img {
+        max-width: 100%;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="perfil">
+      <div class="perfil-info">
+        <div class="foto-perfil">
+          <!-- Aqui será inserida a foto de perfil -->
+        </div>
+        <h1 class="nome-perfil">Nome do Perfil</h1>
+      </div>
+      <div class="feed">
+        <!-- Aqui será inserida uma postagem do perfil -->
+      </div>
+    </div>
+    <script>
+      // Array de objetos contendo informações dos perfis
+      const perfis = [
+        {
+          nome: "João",
+          fotoPerfil:
+            "https://t3.ftcdn.net/jpg/03/02/88/46/360_F_302884605_actpipOdPOQHDTnFtp4zg4RtlWzhOASp.jpg",
+          postagens: [
+            "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+            "https://imagens.usp.br/wp-content/uploads/Campus-15-Foto-Marcos-Santos20101220_066.jpg",
+            "https://img.freepik.com/fotos-gratis/uma-pintura-de-um-lago-de-montanha-com-uma-montanha-ao-fundo_188544-9126.jpg",
+          ],
+        },
+        // Adicione outros perfis conforme necessário
+        {
+          nome: "Karina",
+          fotoPerfil:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Woman_1.jpg/480px-Woman_1.jpg",
+          postagens: [
+            "https://i.pinimg.com/736x/19/e1/3c/19e13c58ff5cf5ffe040169d30751737.jpg",
+            "https://e0.pxfuel.com/wallpapers/49/365/desktop-wallpaper-1080-x-1080-1080-x1080.jpg",
+            "https://w0.peakpx.com/wallpaper/473/232/HD-wallpaper-steam-workshop-japan-landscape-anime-1080x1080-japanese.jpg",
+          ],
+        },
+      ];
+
+      // Função para exibir um perfil aleatório
+      function exibirPerfilAleatorio() {
+        const perfilAleatorio =
+          perfis[Math.floor(Math.random() * perfis.length)];
+
+        // Inserir a foto de perfil
+        const fotoPerfil = document.querySelector(".foto-perfil");
+        fotoPerfil.innerHTML = `<img src="${perfilAleatorio.fotoPerfil}" alt="Foto de perfil" />`;
+
+        // Inserir o nome do perfil
+        const nomePerfil = document.querySelector(".nome-perfil");
+        nomePerfil.textContent = perfilAleatorio.nome;
+
+        // Exibir uma postagem aleatória do perfil
+        const feed = document.querySelector(".feed");
+        feed.innerHTML = ""; // Limpar o conteúdo anterior do feed
+
+        const randomIndex = Math.floor(
+          Math.random() * perfilAleatorio.postagens.length
+        );
+        const postagem = document.createElement("div");
+        postagem.classList.add("postagem");
+        const imagem = document.createElement("img");
+        imagem.src = perfilAleatorio.postagens[randomIndex];
+        postagem.appendChild(imagem);
+        feed.appendChild(postagem);
+      }
+
+      // Chamar a função para exibir um perfil aleatório quando a página carregar
+      window.onload = exibirPerfilAleatorio;
+    </script>
+  </body>
+</html>
