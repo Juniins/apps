@@ -1,0 +1,701 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+/* Animação botão*/
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.btn-refund {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff; /* Cor de fundo azul padrão */
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-refund:hover {
+  background-color: #0056b3; /* Cor de fundo azul escuro para o hover */
+  border-color: #0056b3;
+}
+
+.btn-refund:active {
+  background-color: #004080; /* Cor de fundo azul muito escuro para o estado ativo */
+  border-color: #004080;
+}
+
+.btn-refund:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Adiciona uma sombra de foco */
+}
+
+.account-look {
+  margin: 0px;
+  border-radius: 6px;
+  padding: 10px 10px;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.inputy {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 3px;
+  background-color: rgb(237, 237, 237);
+  border: solid 1px rgba(189, 196, 204, 0.9);
+  display: flex;
+  color: black;
+  border-radius: 5px;
+}
+
+#username2 {
+  font-size: 15px; /* Tamanho da fonte do parágrafo */
+  color: #333; /* Cor do texto */
+  margin: 0; /* Remova as margens padrão do parágrafo */
+  padding: 5px; /* Espaçamento interno do parágrafo */
+}
+
+#username {
+  font-size: 15px; /* Tamanho da fonte do parágrafo */
+  color: #333; /* Cor do texto */
+  margin: 0; /* Remova as margens padrão do parágrafo */
+  padding: 5px; /* Espaçamento interno do parágrafo */
+}
+
+#email {
+  font-size: 16px; /* Tamanho da fonte do parágrafo */
+  color: #333; /* Cor do texto */
+  margin: 0; /* Remova as margens padrão do parágrafo */
+  padding: 5px; /* Espaçamento interno do parágrafo */
+}
+
+.withdraw {
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 7px;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0px;
+}
+
+.progress-container {
+  margin: 4px 0px;
+  width: 100%;
+  background-color: #e6e6e6;
+  height: 8px;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.5s;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 50px;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.btn-init img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  margin-right: 5px;
+}
+
+.btn-init {
+  display: block; /* Torna o botão um elemento de bloco */
+  width: 95%; /* Ocupa toda a largura disponível do contêiner */
+  padding: 15px; /* Espaçamento interno do botão */
+  background-color: #17b651;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  text-align: center; /* Centraliza o texto */
+  box-shadow: inset 0 -3px 0 0 #00000038;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-init:hover {
+  color: white;
+}
+
+.btn-cta {
+  display: block; /* Torna o botão um elemento de bloco */
+  width: 95%; /* Ocupa toda a largura disponível do contêiner */
+  padding: 10px; /* Espaçamento interno do botão */
+  border-radius: 5px;
+  background-color: #0062ff;
+  text-decoration: none;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  text-align: center; /* Centraliza o texto */
+}
+
+.icon svg {
+  color: #17b651;
+  width: 30px;
+}
+
+.container {
+  padding: 0px;
+  justify-content: center;
+}
+
+.container-ads {
+  /*padding: 10px;*/
+  justify-content: center;
+  margin-top: 56px;
+  max-width: 100%;
+  padding: 0px;
+}
+
+.w-12 {
+  width: 3.5rem;
+}
+
+.header {
+  background-color: white;
+  padding-top: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+}
+
+.selected {
+  background-color: white; /* Define a cor de fundo quando selecionado */
+  color: #333; /* Define a cor do texto quando selecionado */
+}
+
+.footer img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer {
+  align-content: center;
+  background-color: transparent;
+}
+
+.navbar {
+  /* Adicionando sombra apenas na parte inferior */
+  position: fixed;
+  bottom: 10px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  height: 40px;
+  z-index: 999;
+  padding: 0; /* Remova o padding da div navbar */
+}
+
+.home-btn,
+.account-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid transparent;
+}
+
+.home,
+.account {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.home-btn.selected,
+.account-btn.selected {
+  background-color: white;
+  color: #333; /* Define a cor do texto quando selecionado */
+}
+
+.aviso {
+  margin: 15px 0px 0px 0px;
+  border-radius: 10px;
+  align-content: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+#descad {
+  padding-left: 10px;
+  padding-right: 12px;
+}
+
+.wallet {
+  background-color: #d400ffe1;
+  max-width: 260px;
+  position: relative;
+  font-weight: 600;
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.275em;
+  border-radius: 6px;
+}
+
+.balance {
+  padding: 12px 6px 12px 6px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.balance h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.saldo {
+  color: #17b651;
+}
+
+.look {
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.look h2 {
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 80%;
+  color: #353535;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.my-3 {
+  margin-top: 0px !important;
+  width: 70%;
+}
+
+.aviso h1 {
+  font-weight: 900;
+  color: #353535;
+  font-size: 28px;
+  text-align: center;
+}
+
+.aviso h4 {
+  font-size: 14px;
+  margin: 0px;
+  line-height: 1.25;
+  padding-right: 10px;
+  text-align: center;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.aviso p {
+  font-size: 1.275em;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #353535;
+  text-align: center;
+}
+
+.aviso p span {
+  color: #ff9400;
+  font-weight: 700;
+}
+
+.ads1-point {
+  margin-bottom: 5px;
+}
+
+#inicio {
+  flex: 0.8; /* Ocupa 20% do espaço */
+}
+
+#shorts {
+  flex: 1; /* Ocupa 20% do espaço */
+}
+
+#plus {
+  flex: 1; /* Ocupa 20% do espaço */
+  display: flex;
+  justify-content: center; /* Centraliza o ícone dentro do espaço alocado */
+  align-items: center;
+}
+
+#subs {
+  flex: 1; /* Ocupa 20% do espaço */
+}
+
+#libs {
+  flex: 1; /* Ocupa 20% do espaço */
+}
+
+.navbar svg {
+  margin-top: 10px;
+  color: black;
+}
+
+.navbar p {
+  font-size: 10px;
+  margin: 5px 0px 5px 0px;
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 6px 5px;
+  border: solid 1px #d0d0d0;
+  color: white;
+}
+
+.account-info img {
+  margin-right: 2px;
+  width: 25px;
+  border-radius: 100%;
+}
+
+.black {
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 2px rgba(56, 22, 129, 0.5);
+}
+
+.yes {
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #6ac92f;
+  outline: none;
+  text-decoration: none;
+  color: black;
+  border: none;
+  border-bottom: 5px solid #408615;
+}
+
+.hide {
+  display: none;
+}
+
+.maispadding {
+  max-width: 500px;
+  padding: 15px 30px;
+  border-bottom: solid 1px rgba(189, 196, 204, 0.9);
+}
+
+.btn-voto {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #000;
+  /* font-weight: 800; */
+  color: #fff;
+  font-size: 1.275em;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.btn-voto:active {
+  border: solid 1px black;
+}
+
+.btn-voto i {
+  font-size: 20px;
+}
+
+.n-w {
+  background-color: rgb(193 193 193) !important;
+  border: none !important;
+}
+
+.n-1 {
+  background-color: #a72525;
+}
+
+.n-2 {
+  background-color: #cb7a17;
+}
+
+.n-3 {
+  background-color: #b6a719;
+}
+
+.n-4 {
+  background-color: #61bf22;
+}
+
+.n-5 {
+  background-color: #1cbc11;
+}
+
+.refresh {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #00a0f0 !important;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.275em;
+  cursor: pointer;
+  padding: 0px;
+  text-decoration: none;
+}
+
+.refresh :hover,
+.refresh :focus,
+.refresh:active {
+  color: inherit; /* Manter a cor do texto inalterada ao clicar */
+}
+/* Abre CSS Slider */
+
+.container-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.container-images {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  opacity: 0;
+  transition: opacity 0.2s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+  position: absolute;
+  border-radius: 4px;
+}
+
+.on {
+  opacity: 1;
+}
+
+/* Fecha CSS Slider */
+
+#legenda {
+  text-align: left;
+  line-height: 1.3;
+  font-size: 16px;
+  padding-left: 4px;
+}
+
+/*Abre CSS Notificações*/
+/* Estilo base das notificações */
+.notification {
+  width: 350px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #363636;
+  line-height: 1.3;
+  will-change: transform;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  pointer-events: auto;
+  padding: 12px 25px 12px 10px;
+  border-radius: 8px;
+  animation: slideIn 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) 0s 1 normal
+    forwards;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  z-index: 99999999999;
+}
+
+/* Animação de entrada das notificações */
+@keyframes slideIn {
+  0% {
+    transform: translate3d(0, -100%, 0) scale(0.6);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animação de saída das notificações */
+@keyframes slideOut {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+    z-index: 0; /* Define a ordem de sobreposição durante a saída */
+  }
+  100% {
+    transform: translate3d(0, -100%, 0) scale(0.6);
+    opacity: 0;
+    z-index: 0; /* Redefine a ordem de sobreposição após a saída */
+  }
+}
+
+/* Ícone de check com SVG */
+.check-icon {
+  margin-right: 10px;
+  width: 35px;
+  height: 35px; /* Tamanho inicial do ícone */
+  box-sizing: border-box;
+  /* border-radius: 100%; */
+  transform: scale(0.6); /* Define o ícone para a escala inicial da animação */
+  transition: transform 0.3s ease-out; /* Adicionando uma transição de transformação */
+}
+
+/* Contêiner de notificações */
+#notificationContainer {
+  position: fixed;
+  z-index: 9999999999;
+  top: 0; /* Alinhe o container ao topo */
+  left: 50%; /* Alinhe horizontalmente ao centro */
+  transform: translateX(-50%); /* Centralize horizontalmente o container */
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+/* CSS para a nova div que envolve as notificações */
+#notificationWrapper {
+  left: 0px;
+  right: 0px;
+  display: flex;
+  position: absolute;
+  transition: all 230ms cubic-bezier(0.21, 1.02, 0.73, 1) 0s; /* Adicionando a transição */
+  transform: translateY(0px);
+  top: 0px;
+  justify-content: flex-end;
+}
+
+/* Estilo da mensagem de notificação */
+.notification-message {
+  font-weight: normal;
+}
+/*Fecha CSS Notificações*/
+
+/* CSS FEED */
+.perfil {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.foto-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.foto-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perfil-info {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.nome-perfil {
+  font-size: 16px;
+  margin-left: 8px;
+  margin-bottom: 0px;
+}
+
+.feed {
+  margin-top: 10px;
+}
+
+.postagem {
+  height: 450px;
+  margin-bottom: 5px;
+}
+
+.postagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.postheader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.page {
+  padding-top: 100px;
+}
