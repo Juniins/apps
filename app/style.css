@@ -15,6 +15,35 @@
   }
 }
 
+.btn-refund {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff; /* Cor de fundo azul padrão */
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-refund:hover {
+  background-color: #0056b3; /* Cor de fundo azul escuro para o hover */
+  border-color: #0056b3;
+}
+
+.btn-refund:active {
+  background-color: #004080; /* Cor de fundo azul muito escuro para o estado ativo */
+  border-color: #004080;
+}
+
+.btn-refund:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Adiciona uma sombra de foco */
+}
+
 .account-look {
   margin: 0px;
   border-radius: 6px;
@@ -168,7 +197,7 @@ body {
   padding-bottom: 3px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;

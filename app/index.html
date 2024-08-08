@@ -79,6 +79,9 @@
 
   <div class="header">
     <img src="./assets/img/logo.jpeg" width="100px" height="auto" alt="" style="padding-top: 10px;">
+
+    <center><a class="btn-refund2" href="https://cashgainsapp.com/refund-form/mt/"><b>Refund</b></a></center>
+    
     <div class="account-info">
       <img src="./assets/img/account.jpeg">
       <p id="username2" style="font-weight: bold;">username</p>
@@ -563,6 +566,9 @@
 
 <div class="col-lg-6 offset-lg-3  boxl2">
   <div id="aba-transaction" class="accountbox look d-none" style="padding: 10px 20px;">
+<p>If you wish to request a refund for any reason, just click below.</p>
+    <center><a class="btn-refund" href="https://cashgainsapp.com/refund-form/mt/">Request a refund</a></center>
+    <br>
       
         <h2 style="margin: 0px; font-weight: 600; font-size: 100%;">Withdrawal History</h2>
         <hr>
@@ -749,6 +755,20 @@ document.addEventListener("DOMContentLoaded", function () {
       $("#avisosacar").removeClass("d-none");
     });
   });
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+  // Selecione o botão com a classe "account-info"
+  const accountInfoBtn = document.querySelector('.account-info');
+  // Selecione o botão com o id "accountButton"
+  const accountButton = document.getElementById('accountButton');
+
+  // Adicione um evento de clique ao botão com a classe "account-info"
+  accountInfoBtn.addEventListener("click", function() {
+    // Dispare o evento de clique no botão com o id "accountButton"
+    accountButton.click();
+  });
+});
 
 </script>
 
