@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Refund</title>
+    <style>
+      input[type="text"] {
+        width: 150px;
+      }
+      .terms-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .terms-container input[type="checkbox"] {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img src="./img/law.svg" width="100px">
+      <br>
+      <h3>
+        DEAR CUSTOMER, NEVER REQUEST REFUND DIRECTLY TO YOUR BANK/CREDIT CARD
+      </h3>
+      <br />
+      <p>See the risks...</p>
+      <br />
+      <p>
+        We hope you are satisfied with our digital product and enjoying all the
+        benefits it offers. We would like to draw your attention to the serious
+        consequences of requesting a chargeback in bad faith, i.e. disputing a
+        legitimate purchase for no good reason.<br />
+      </p>
+      <br />
+      <p>
+        First of all, it is important to point out that we are committed to
+        providing you with the best possible service and solving any problems
+        you may encounter.
+      </p>
+      <br />
+      <p>
+        If you have any concerns or questions about the product you have
+        purchased, please contact us. We are here to help.
+      </p>
+    </section>
+    <div class="faixa">
+      <u> Please confirm that you are aware and proceed: </u>
+    </div>
+    <section-form>
+      <img src="./img/refund.svg" width="100px">
+      <h2><u>I AM AWARE AND WANT TO REQUEST REFUND</u></h2>
+      <form action="https://api.staticforms.xyz/submit" method="post" lang="en">
+        
+        <label>Enter your e-mail address (the same one you used when you made the purchase) and purchase date</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Your e-mail:"
+          autocomplete="off"
+          required
+        />
+        
+        <input
+          type="text"
+          id="purchase-date"
+          name="$purchaseDate"
+          placeholder="MM/DD/YYYY"
+          maxlength="10"
+          required
+        />
+
+        <div class="terms-container">
+          <input type="checkbox" id="terms" name="$termsAccepted" required>
+          <label for="terms"><u>I confirm that I have purchased the product and wish to request a refund</u></label>
+        </div>
+        
+      
+        <button type="submit">Send Request <img src="./img/money.svg" width="20px" ></button>
+
+        <input
+          type="hidden"
+          name="accessKey"
+          value="b72e2430-708e-4ffb-a540-dc11243becdd"
+        />
+        <input
+          type="hidden"
+          name="redirectTo"
+          value="https://cashgainsapp.com/refund-form/jg/thanks/index.html"
+        />
+      </form>
+    </section>
+
+    <script>
+      document.getElementById('purchase-date').addEventListener('input', function (e) {
+        var input = e.target.value;
+        if (/^\d{2}$/.test(input)) {
+          e.target.value = input + '/';
+        } else if (/^\d{2}\/\d{2}$/.test(input)) {
+          e.target.value = input + '/';
+        }
+      });
+
+      document.getElementById('purchase-date').addEventListener('blur', function (e) {
+        var input = e.target.value;
+        if (!/^\d{2}\/\d{2}\/\d{4}$/.test(input)) {
+          e.target.setCustomValidity('Please enter the date in MM/DD/YYYY format.');
+        } else {
+          e.target.setCustomValidity('');
+        }
+      });
+
+      document.getElementById('purchase-date').addEventListener('keydown', function (e) {
+        if (e.target.value.length >= 10 && e.key !== 'Backspace' && e.key !== 'Delete') {
+          e.preventDefault();
+        }
+      });
+    </script>
+
+<script>
+  // Validação do campo de e-mail
+  document.querySelector('input[name="email"]').addEventListener('invalid', function (e) {
+    e.target.setCustomValidity('Please enter a valid email address.');
+  });
+
+  // Validação do campo de data
+  document.getElementById('purchase-date').addEventListener('invalid', function (e) {
+    e.target.setCustomValidity('Please enter the date in MM/DD/YYYY format.');
+  });
+
+  // Validação da caixa de seleção
+  document.getElementById('terms').addEventListener('invalid', function (e) {
+    e.target.setCustomValidity('You must confirm to proceed.');
+  });
+
+  // Limpar a mensagem personalizada quando o campo estiver válido
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', function (e) {
+      e.target.setCustomValidity('');
+    });
+  });
+</script>
+
+  </body>
+</html>
